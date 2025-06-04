@@ -24,18 +24,18 @@ This is a Flask-based backend system that enables booking, viewing, and managing
 ---
 
 ## 📦 Folder Structure
-fitness_booking_api/
-├── app/
-│ ├── init.py # Flask factory & DB init
-│ ├── models.py # SQLAlchemy models
-│ ├── routes.py # API endpoints
-│ ├── utils.py # helper
-│ └── logger.py # Logger setup
-├── logs/ # Rotating log files
-├── seed_data.py # Populates DB with sample classes
-├── main.py # Entry point
-├── requirements.txt
-├── .gitignore
+fitness_booking_api/<br>
+├── app/<br>
+│ ├── init.py # Flask factory & DB init<br>
+│ ├── models.py # SQLAlchemy models<br>
+│ ├── routes.py # API endpoints<br>
+│ ├── utils.py # helper<br>
+│ └── logger.py # Logger setup<br>
+├── logs/ # Rotating log files<br>
+├── seed_data.py # Populates DB with sample classes<br>
+├── main.py # Entry point<br>
+├── requirements.txt<br>
+├── .gitignore<br>
 └── README.md
 
 ## Endpoints
