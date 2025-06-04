@@ -6,6 +6,21 @@ __pycache__/
 # C extensions
 *.so
 
+# Logs
+logs/
+*.log
+
+# SQLite database
+*.sqlite3
+*.db
+
+# Pytest cache
+.pytest_cache/
+.cache/
+
+# VS Code files
+.vscode/
+
 # Distribution / packaging
 .Python
 build/
