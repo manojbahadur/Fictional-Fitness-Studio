@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_restx import Api
 from .logger import setup_logger
-
 
 db = SQLAlchemy()
 
@@ -11,10 +11,13 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     setup_logger(app)
-    
     db.init_app(app)
 
-    from .routes import main as main_blueprint
-    app.register_blueprint(main_blueprint)
+    app_api = Api(app, doc='/docs', title="🏋️ Fitness Studio Booking API", version="1.0")
+
+    # 👇 Lazy import to prevent circular dependency
+    from .routes import api
+    app_api.add_namespace(api, path='/')
 
     return app
+
