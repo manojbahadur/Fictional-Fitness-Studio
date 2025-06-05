@@ -2,9 +2,10 @@ from flask import request, current_app
 from .models import FitnessClass, Booking
 from flask_restx import Namespace, Resource, fields
 from . import db
-from datetime import datetime
-from pydantic import BaseModel, EmailStr, ValidationError
+from pydantic import ValidationError
 from pytz import timezone
+from .utils import BookingRequest
+
 
 api = Namespace('booking', description='Booking API')
 
@@ -15,12 +16,8 @@ booking_model = api.model('Booking', {
 })
 
 
-class BookingRequest(BaseModel):
-    class_id: int
-    client_name: str
-    client_email: EmailStr
 
-
+# Booking API Routes
 
 @api.route('/classes')
 class ClassList(Resource):
@@ -43,8 +40,9 @@ class ClassList(Resource):
                 'instructor': cls.instructor,
                 'available_slots': cls.available_slots
             })
-        current_app.logger.info(f"Classes returned in timezone {user_tz}")
+        current_app.logger.info(f"Classes returned {user_tz}")
         return data, 200
+
 
 @api.route('/book')
 class BookClass(Resource):

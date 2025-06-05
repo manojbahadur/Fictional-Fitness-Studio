@@ -1,7 +1,6 @@
-from pytz import timezone
+from pydantic import BaseModel, EmailStr
 
-def convert_to_timezone(dt, tz_name):
-    ist = timezone("Asia/Kolkata")
-    target = timezone(tz_name)
-    dt_ist = ist.localize(dt)
-    return dt_ist.astimezone(target)
+class BookingRequest(BaseModel):
+    class_id: int
+    client_name: str
+    client_email: EmailStr
