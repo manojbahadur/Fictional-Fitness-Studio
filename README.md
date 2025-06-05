@@ -4,7 +4,7 @@ A Flask-based backend for managing fitness class bookings.
 
 # 🧘‍♀️ Fitness Studio Booking API
 
-This is a Flask-based backend system that enables booking, viewing, and managing fitness classes such as Yoga, Zumba, and HIIT. It demonstrates core backend skills including REST API design, validation, logging, error handling, timezone management, and basic testing.
+This is a Flask-based backend system that enables booking, viewing, and managing fitness classes such as Yoga, Zumba, and HIIT. It demonstrates core backend skills including REST API design, validation, logging, error handling, timezone management, and Swagger UI documentationc.
 
 ---
 
@@ -18,8 +18,7 @@ This is a Flask-based backend system that enables booking, viewing, and managing
 - ✅ Timezone-aware class timings
 - ✅ Validation with Pydantic
 - ✅ Logging to `info.log` and `error.log` with line numbers
-- ✅ Docker support for easy deployment
-- ✅ Unit tests using Pytest
+- ✅ Swagger UI with live documentation and request validation
 
 ---
 
