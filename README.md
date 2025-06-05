@@ -58,4 +58,4 @@ python main.py
 
 ## Loom Video
 
-Record a short Loom walkthrough of how the project works.
+[Record a short Loom walkthrough of how the project works.](https://www.loom.com/share/4d2f672ce9d64ba398d2bd0b062b0a50?sid=38a799e1-1faa-4403-94f9-ebcef4b3cb14)
